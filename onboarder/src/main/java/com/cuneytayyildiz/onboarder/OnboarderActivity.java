@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 
 import com.cuneytayyildiz.onboarder.utils.ColorsArrayBuilder;
 import com.cuneytayyildiz.onboarder.utils.OnboarderPageChangeListener;
@@ -79,6 +80,16 @@ public abstract class OnboarderActivity extends AppCompatActivity implements Vie
 
     public void shouldDarkenButtonsLayout(boolean shouldDarkenButtonsLayout) {
         this.shouldDarkenButtonsLayout = shouldDarkenButtonsLayout;
+    }
+
+    public FrameLayout getButtonsLayout(){
+        return this.buttonsLayout;
+    }
+
+    public void setButtonsLayoutBackgroundColor(int color){
+        if (this.buttonsLayout != null){
+            this.buttonsLayout.setBackgroundColor(color);
+        }
     }
 
     public void setDividerColor(@ColorInt int color) {
